@@ -65,4 +65,8 @@ lineup_df = pd.DataFrame(lineup)
 st.subheader("✅ Optimized DraftKings Lineup")
 st.dataframe(lineup_df)
 csv = lineup_df.to_csv(index=False).encode("utf-8")
-st.download_button("Download Lineup as CSV", csv, "dk_optimal_lineup.csv", "text/csv")
+st.download_button(
+    label="Download Lineup as CSV",
+    data=csv,
+    file_name="optimized_lineup.csv",
+    mime="text/csv"
